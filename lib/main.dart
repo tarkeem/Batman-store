@@ -1,11 +1,10 @@
-import 'package:audioplayers/audioplayers.dart';
+
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:fairytales/view/screens/authenticationSc.dart';
 import 'package:flutter/material.dart';
 
-void main()async {
-  WidgetsFlutterBinding.ensureInitialized();
-  var player=AudioCache();
-  await player.load('assets/song.mp3');
+void main(){
+
   runApp(const MyApp());
 }
 
