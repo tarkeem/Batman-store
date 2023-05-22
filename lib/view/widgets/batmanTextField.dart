@@ -13,7 +13,7 @@ class BatManTextField extends StatelessWidget {
       decoration: InputDecoration(
         labelStyle: TextStyle(color: Colors.white),
         floatingLabelBehavior:FloatingLabelBehavior.always ,//important to write a text on border
-        enabledBorder: border,border: border, /*labelText: Text(Label),*/labelText: Label),
+        enabledBorder: border,border: border, /*labelText: Text(Label),*/label: Text(Label)),
     );
   }
 }

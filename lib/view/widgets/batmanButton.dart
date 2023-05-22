@@ -3,6 +3,7 @@ import 'package:flutter/src/animation/animation_controller.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/ticker_provider.dart';
+import 'package:lottie/lottie.dart';
 import 'package:vector_math/vector_math.dart' as vector;
 
 class BatManButton extends StatefulWidget {
@@ -38,6 +39,7 @@ class _BatManButtonState extends State<BatManButton>
           widget.onTap();
         },
         child: Container(
+          height: 40,
           color: Colors.yellow,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -46,10 +48,13 @@ class _BatManButtonState extends State<BatManButton>
               children: [
                 Transform.rotate(
                     angle: vector.radians(45),
-                    child: Image.asset(
-                      'assets/batman_logo.png',
-                      height: 25,
-                      color: Colors.black,
+                    child:
+                    Transform.scale(
+                      scaleX: 2,
+                      scaleY: 4,
+                      child: Lottie.asset(
+                        'assets/images/batman.json',
+                      ),
                     )),
                 Text(
                   widget.text,

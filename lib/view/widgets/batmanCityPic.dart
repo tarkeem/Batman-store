@@ -10,7 +10,7 @@ class BatmanCityOic extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipPath(
       clipper: _clipper(percent),
-      child: Image.asset('assets/city.png'),
+      child: Image.asset('assets/images/city.png'),
     );
   }
 }

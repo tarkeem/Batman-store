@@ -1,31 +1,28 @@
-import 'package:flutter/src/animation/animation_controller.dart';
+import 'dart:async';
+
+import 'package:batman/view/screens/authenticationSc.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/ticker_provider.dart';
 
-class LogInSc extends StatefulWidget {
-  const LogInSc({super.key});
+class MyWidget extends StatefulWidget {
+  const MyWidget({super.key});
 
   @override
-  State<LogInSc> createState() => _LogInScState();
+  State<MyWidget> createState() => _MyWidgetState();
 }
 
-class _LogInScState extends State<LogInSc>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-
+class _MyWidgetState extends State<MyWidget> {
   @override
   void initState() {
+    // TODO: implement initState
     super.initState();
-    _controller = AnimationController(vsync: this);
+    Timer(Duration(seconds: 10), () {
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) =>AuthenticationScreen() ,));
+    },);
   }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
+  
   @override
   Widget build(BuildContext context) {
     return Container();
